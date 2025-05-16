@@ -1,16 +1,24 @@
 import React from 'react';
+import './PropertyCard.css';
 
 const PropertyCard = ({ property }) => {
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat('ru-RU', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(price);
+  };
+
   return (
     <div className="property-card">
       <div 
         className="property-card-image" 
         style={{
           backgroundImage: `url(${property.image})`,
-          height: '200px',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          borderRadius: '4px 4px 0 0'
+          backgroundPosition: 'center'
         }}
       />
       <div className="property-card-content">
@@ -18,12 +26,12 @@ const PropertyCard = ({ property }) => {
         <p className="property-location">{property.location}</p>
         <p className="property-description">{property.description}</p>
         <div className="property-features">
-          <span>{property.bedrooms} Beds</span>
-          <span>{property.bathrooms} Baths</span>
-          <span>{property.area} sq ft</span>
+          <span>{property.bedrooms} комн.</span>
+          <span>{property.bathrooms} санузл.</span>
+          <span>{property.area} м²</span>
         </div>
-        <div className="property-price">${property.price.toLocaleString()}</div>
-        <button className="view-property-btn">View Property</button>
+        <div className="property-price">{formatPrice(property.price)}</div>
+        <button className="view-property-btn">Смотреть детали</button>
       </div>
     </div>
   );

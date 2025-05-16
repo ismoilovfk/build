@@ -78,11 +78,20 @@ function App() {
       </div>
       
       <section id="properties" className="properties-section">
-        <h2>Элитные апартаменты</h2>
-        <div className="property-grid">
-          {properties.map(property => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
+        <div className="section-container">
+          <h2>Элитные апартаменты</h2>
+          <p className="section-description">
+            Откройте для себя коллекцию эксклюзивных апартаментов Hayot Tower, где роскошь встречается с комфортом.
+            Выберите идеальное пространство, отвечающее вашим потребностям.
+          </p>
+          <div className="property-grid">
+            {properties.map(property => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
+          <div className="view-all-container">
+            <button className="view-all-btn">Смотреть все варианты</button>
+          </div>
         </div>
       </section>
       
@@ -91,18 +100,61 @@ function App() {
       </section>
       
       <section id="contact" className="contact-section">
-        <h2>Связаться с нами</h2>
-        <form>
-          <input type="text" placeholder="Ваше имя" />
-          <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Телефон" />
-          <textarea placeholder="Сообщение"></textarea>
-          <button type="submit">Отправить</button>
-        </form>
+        <div className="section-container">
+          <h2>Связаться с нами</h2>
+          <p className="section-description">
+            Получите дополнительную информацию о Hayot Tower или запишитесь на просмотр, связавшись с нашими консультантами.
+          </p>
+          <form>
+            <input type="text" placeholder="Ваше имя" />
+            <input type="email" placeholder="Email" />
+            <input type="tel" placeholder="Телефон" />
+            <textarea placeholder="Сообщение"></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
       
       <footer className="app-footer">
-        <p>&copy; 2023 Hayot Tower. Все права защищены.</p>
+        <div className="footer-content">
+          <div className="footer-logo">
+            <h3>Hayot Tower</h3>
+            <p>Элитный жилой комплекс в центре города</p>
+          </div>
+          
+          <div className="footer-links">
+            <div className="footer-link-column">
+              <h4>Апартаменты</h4>
+              <ul>
+                <li><a href="#prestige">Престижные апартаменты</a></li>
+                <li><a href="#family">Семейные резиденции</a></li>
+                <li><a href="#penthouse">Премиум пентхаусы</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-link-column">
+              <h4>О комплексе</h4>
+              <ul>
+                <li><a href="#architecture">Архитектура</a></li>
+                <li><a href="#amenities">Инфраструктура</a></li>
+                <li><a href="#location">Расположение</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-link-column">
+              <h4>Контакты</h4>
+              <ul>
+                <li><a href="tel:+998000000000">+998 (00) 000-00-00</a></li>
+                <li><a href="mailto:info@hayottower.com">info@hayottower.com</a></li>
+                <li><a href="#address">г. Ташкент, ул. Примерная, 123</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>&copy; 2023 Hayot Tower. Все права защищены.</p>
+        </div>
       </footer>
     </div>
   );
