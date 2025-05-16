@@ -1,41 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import PropertySlider from './components/PropertySlider';
 import PropertyCard from './components/PropertyCard';
+import AboutComplex from './components/AboutComplex';
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Sample data for property cards
   const properties = [
     {
       id: 1,
-      title: 'Luxury Villa',
-      location: 'Palm Jumeirah, Dubai',
-      description: 'Elegant villa with private beach access and stunning sea views.',
-      bedrooms: 4,
-      bathrooms: 5.5,
-      area: 5000,
-      price: 3500000,
+      title: 'Престижные апартаменты',
+      location: 'Hayot Tower, 4-12 этаж',
+      description: 'Просторные апартаменты с панорамными окнами и высококачественной отделкой.',
+      bedrooms: 3,
+      bathrooms: 2,
+      area: 120,
+      price: 650000,
       image: '/images/properties/property1.jpg'
     },
     {
       id: 2,
-      title: 'Modern Apartment',
-      location: 'Downtown, Dubai',
-      description: 'Contemporary apartment with Burj Khalifa views and premium amenities.',
-      bedrooms: 2,
-      bathrooms: 2,
-      area: 1200,
+      title: 'Семейные резиденции',
+      location: 'Hayot Tower, 14-20 этаж',
+      description: 'Комфортные семейные резиденции с увеличенной площадью и эргономичной планировкой.',
+      bedrooms: 4,
+      bathrooms: 3,
+      area: 180,
       price: 950000,
       image: '/images/properties/property2.jpg'
     },
     {
       id: 3,
-      title: 'Waterfront Townhouse',
-      location: 'Dubai Marina',
-      description: 'Spacious townhouse with marina views and direct access to the beach.',
-      bedrooms: 3,
-      bathrooms: 3.5,
-      area: 2200,
+      title: 'Премиум пентхаусы',
+      location: 'Hayot Tower, 21-24 этаж',
+      description: 'Эксклюзивные пентхаусы с террасами и собственными зонами отдыха на верхних этажах.',
+      bedrooms: 5,
+      bathrooms: 4,
+      area: 250,
       price: 1800000,
       image: '/images/properties/property3.jpg'
     },
@@ -43,13 +62,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
-        <div className="logo">Real Estate</div>
+      <header className={`app-header ${scrolled ? 'scrolled' : ''}`}>
+        <div className="logo">Hayot Tower</div>
         <nav>
           <ul>
-            <li><a href="#properties">Properties</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#properties">Апартаменты</a></li>
+            <li><a href="#about">О комплексе</a></li>
+            <li><a href="#contact">Контакты</a></li>
           </ul>
         </nav>
       </header>
@@ -59,7 +78,7 @@ function App() {
       </div>
       
       <section id="properties" className="properties-section">
-        <h2>Featured Properties</h2>
+        <h2>Элитные апартаменты</h2>
         <div className="property-grid">
           {properties.map(property => (
             <PropertyCard key={property.id} property={property} />
@@ -68,36 +87,22 @@ function App() {
       </section>
       
       <section id="about" className="about-section">
-        <h2>About Us</h2>
-        <p>We are a leading real estate company with years of experience in the market. Our mission is to help our clients find their dream properties with exceptional service and expertise.</p>
-        <div className="about-features">
-          <div className="feature">
-            <h3>Expert Advisors</h3>
-            <p>Our team consists of experienced professionals who know the market inside out.</p>
-          </div>
-          <div className="feature">
-            <h3>Premium Properties</h3>
-            <p>We offer a curated selection of high-quality properties in the most desirable locations.</p>
-          </div>
-          <div className="feature">
-            <h3>Client Satisfaction</h3>
-            <p>We prioritize our clients' needs and ensure a smooth buying or selling process.</p>
-          </div>
-        </div>
+        <AboutComplex />
       </section>
       
       <section id="contact" className="contact-section">
-        <h2>Contact Us</h2>
+        <h2>Связаться с нами</h2>
         <form>
-          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Ваше имя" />
           <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
+          <input type="tel" placeholder="Телефон" />
+          <textarea placeholder="Сообщение"></textarea>
+          <button type="submit">Отправить</button>
         </form>
       </section>
       
       <footer className="app-footer">
-        <p>&copy; 2023 Real Estate Company. All rights reserved.</p>
+        <p>&copy; 2023 Hayot Tower. Все права защищены.</p>
       </footer>
     </div>
   );

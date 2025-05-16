@@ -1,0 +1,190 @@
+.about-complex {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #333;
+}
+
+.about-complex-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-complex-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-complex-header .about-tagline {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-complex-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.about-complex-image-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-complex-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-complex-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-complex-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1e1e1e;
+  font-weight: 500;
+}
+
+.about-complex-text p {
+  margin-bottom: 25px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-complex-advantages {
+  margin-bottom: 60px;
+}
+
+.about-complex-advantages h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.advantage-item {
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.advantage-icon {
+  margin-bottom: 15px;
+  color: #3a86ff;
+}
+
+.advantage-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.advantage-item p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.about-complex-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+  background-color: #f5f7fa;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.feature-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.feature-column h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.feature-column ul {
+  padding-left: 20px;
+}
+
+.feature-column li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.about-complex-cta {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+}
+
+.about-complex-cta h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.cta-button {
+  padding: 15px 35px;
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(58, 134, 255, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #2a6dd9;
+}
+
+@media (max-width: 768px) {
+  .about-complex-header h2 {
+    font-size: 30px;
+  }
+  
+  .about-complex-content {
+    flex-direction: column;
+  }
+  
+  .about-complex-features {
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+  .feature-column {
+    margin-bottom: 20px;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+} 
