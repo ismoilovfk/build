@@ -131,15 +131,8 @@ const PropertySlider = () => {
         </Slider>
       </div>
       
-      {/* Optional: Add manual navigation buttons outside slider */}
+      {/* Only keeping the indicator dots for navigation */}
       <div className="slider-nav-buttons">
-        <button 
-          className="nav-button prev" 
-          onClick={() => slider && slider.slickPrev()}
-          aria-label="Previous Property"
-        >
-          Previous
-        </button>
         <div className="slider-indicators">
           {sliderProperties.map((_, index) => (
             <button 
@@ -150,13 +143,6 @@ const PropertySlider = () => {
             />
           ))}
         </div>
-        <button 
-          className="nav-button next" 
-          onClick={() => slider && slider.slickNext()}
-          aria-label="Next Property"
-        >
-          Next
-        </button>
       </div>
     </div>
   );
