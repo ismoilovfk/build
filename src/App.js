@@ -177,7 +177,7 @@ function App() {
               <ul>
                 <li><a href="tel:+992947655555">+992 (94) 765-55-55</a></li>
                 <li><a href="mailto:info@hayottower.com">info@hayottower.com</a></li>
-                <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>г. Худжанд, ул. Исмоили Сомони  , 123</a></li>
+                <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>г. Худжанд, ул. Исмоили Сомони, 12</a></li>
               </ul>
             </div>
           </div>
