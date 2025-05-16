@@ -1,0 +1,189 @@
+/* Main App Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f8a100;
+}
+
+/* Hero Section with Slider */
+.hero-section {
+  padding-top: 70px;
+}
+
+.property-slider {
+  width: 100%;
+}
+
+.slider-item {
+  position: relative;
+}
+
+.property-image {
+  position: relative;
+}
+
+.property-info {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.property-info h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.property-info p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.learn-more-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #f8a100;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #e09000;
+}
+
+/* Sections Styling */
+section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Properties Section */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Contact Section */
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section input,
+.contact-section textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-section button {
+  padding: 0.8rem;
+  background-color: #f8a100;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+  background-color: #e09000;
+}
+
+/* Footer Styling */
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    margin-top: 1rem;
+  }
+  
+  .property-info {
+    left: 20px;
+    bottom: 20px;
+    padding: 1rem;
+    max-width: 300px;
+  }
+  
+  section {
+    padding: 3rem 1rem;
+  }
+} 
