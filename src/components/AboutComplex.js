@@ -89,6 +89,48 @@ const AboutComplex = ({ onButtonClick }) => {
             <h4>Зоны отдыха</h4>
             <p>Собственная территория с ландшафтным дизайном и зонами для отдыха</p>
           </div>
+          
+          <div className="advantage-item">
+            <div className="advantage-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 10L19 6M19 6L15 2M19 6H10.5C8.01 6 6 8.01 6 10.5C6 12.99 8.01 15 10.5 15H13.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 14L6 18M6 18L10 22M6 18H14.5C16.99 18 19 15.99 19 13.5C19 11.01 16.99 9 14.5 9H11.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h4>Полная прозрачность</h4>
+            <p>Прямая трансляция со строительной площадки для отслеживания прогресса в реальном времени</p>
+          </div>
+          
+          <div className="advantage-item">
+            <div className="advantage-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 11L11 4L19 11M4 13V20H20V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
+            <h4>Умный дом</h4>
+            <p>Полное управление квартирой через личный кабинет и мобильное приложение</p>
+          </div>
+          
+          <div className="advantage-item">
+            <div className="advantage-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h4>Экосистема сервисов</h4>
+            <p>Готовая экосистема в личном кабинете для управления всеми аспектами жизни в комплексе</p>
+          </div>
+          
+          <div className="advantage-item">
+            <div className="advantage-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 10H18M14 6H18M16 14H18M6 18H18M8 22H16C17.1046 22 18 21.1046 18 20V4C18 2.89543 17.1046 2 16 2H8C6.89543 2 6 2.89543 6 4V20C6 21.1046 6.89543 22 8 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h4>Выбор оператора</h4>
+            <p>Выбор оператора услуг в один клик через удобный интерфейс личного кабинета</p>
+          </div>
         </div>
       </div>
       
@@ -100,6 +142,8 @@ const AboutComplex = ({ onButtonClick }) => {
             <li>Видеонаблюдение по периметру</li>
             <li>Контроль доступа</li>
             <li>Подземный паркинг с системой распознавания номеров</li>
+            <li>Индивидуальное видеонаблюдение для каждого жителя</li>
+            <li>Биометрический доступ в здание</li>
           </ul>
         </div>
         
@@ -110,6 +154,8 @@ const AboutComplex = ({ onButtonClick }) => {
             <li>СПА и зона релаксации</li>
             <li>Детская игровая комната</li>
             <li>Коворкинг и переговорные пространства</li>
+            <li>Консьерж-сервис 24/7</li>
+            <li>Служба доставки внутри комплекса</li>
           </ul>
         </div>
         
@@ -120,6 +166,21 @@ const AboutComplex = ({ onButtonClick }) => {
             <li>Высокоскоростной интернет</li>
             <li>Энергоэффективные решения</li>
             <li>Современные инженерные коммуникации</li>
+            <li>Полное управление квартирой через смартфон</li>
+            <li>Автоматизация климат-контроля и освещения</li>
+            <li>Система умного дома премиум-класса</li>
+          </ul>
+        </div>
+        
+        <div className="feature-column">
+          <h4>Цифровая экосистема</h4>
+          <ul>
+            <li>Единый личный кабинет для всех сервисов</li>
+            <li>Прямые трансляции со строительных площадок</li>
+            <li>Онлайн-мониторинг потребления ресурсов</li>
+            <li>Заказ услуг одним кликом</li>
+            <li>Управление доступом для гостей</li>
+            <li>Цифровые ключи и пропуска</li>
           </ul>
         </div>
       </div>

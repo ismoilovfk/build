@@ -175,16 +175,16 @@ function App() {
             <div className="footer-link-column">
               <h4>Контакты</h4>
               <ul>
-                <li><a href="tel:+998000000000">+998 (00) 000-00-00</a></li>
+                <li><a href="tel:+992947655555">+992 (94) 765-55-55</a></li>
                 <li><a href="mailto:info@hayottower.com">info@hayottower.com</a></li>
-                <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>г. Ташкент, ул. Примерная, 123</a></li>
+                <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleContactClick(); }}>г. Худжанд, ул. Исмоили Сомони  , 123</a></li>
               </ul>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2023 Hayot Tower. Все права защищены.</p>
+          <p>&copy; 2025  Hayot Tower. Все права защищены.</p>
         </div>
       </footer>
     </div>
