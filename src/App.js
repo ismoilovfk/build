@@ -6,7 +6,6 @@ import AboutComplex from './components/AboutComplex';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
-  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,9 +32,9 @@ function App() {
 
   const handleContactClick = () => {
     scrollToSection('contact');
-    setShowContact(true);
     setTimeout(() => {
-      document.querySelector('.contact-section form input').focus();
+      const input = document.querySelector('.contact-section form input');
+      if (input) input.focus();
     }, 800);
   };
 
