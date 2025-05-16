@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutComplex.css';
 
-const AboutComplex = () => {
+const AboutComplex = ({ onButtonClick }) => {
   return (
     <div className="about-complex">
       <div className="about-complex-header">
@@ -12,7 +12,7 @@ const AboutComplex = () => {
       <div className="about-complex-content">
         <div className="about-complex-image-container">
           <img 
-            src="/images/properties/about-complex.jpg" 
+            src={`${process.env.PUBLIC_URL}/images/properties/about-complex.jpg`}
             alt="Hayot Tower" 
             className="about-complex-image"
           />
@@ -126,7 +126,7 @@ const AboutComplex = () => {
       
       <div className="about-complex-cta">
         <h3>Готовы познакомиться с Hayot Tower лично?</h3>
-        <button className="cta-button">Записаться на просмотр</button>
+        <button className="cta-button" onClick={onButtonClick}>Записаться на просмотр</button>
       </div>
     </div>
   );

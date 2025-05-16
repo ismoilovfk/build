@@ -12,7 +12,7 @@ const PropertySlider = () => {
     <button 
       className="slick-arrow custom-prev-arrow" 
       onClick={onClick}
-      aria-label="Previous"
+      aria-label="Предыдущий"
     >
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15 19L8 12L15 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -24,7 +24,7 @@ const PropertySlider = () => {
     <button 
       className="slick-arrow custom-next-arrow" 
       onClick={onClick}
-      aria-label="Next"
+      aria-label="Следующий"
     >
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9 5L16 12L9 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -39,8 +39,8 @@ const PropertySlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, // Reduced from 5000 to 3000 for faster rotation
-    fade: false, // Changed from true to false for slide effect
+    autoplaySpeed: 3000,
+    fade: false,
     cssEase: 'cubic-bezier(0.45, 0, 0.55, 1)',
     draggable: true,
     swipe: true,
@@ -54,10 +54,15 @@ const PropertySlider = () => {
       {
         breakpoint: 768,
         settings: {
-          arrows: false // Hide arrows on mobile
+          arrows: false
         }
       }
     ]
+  };
+
+  // Функция для обработки нажатий на кнопки
+  const handleButtonClick = (title) => {
+    alert(`Вы выбрали "${title}". Наш менеджер свяжется с вами для предоставления дополнительной информации.`);
   };
 
   // Add the PUBLIC_URL from environment 
@@ -68,30 +73,30 @@ const PropertySlider = () => {
     {
       image: `${PUBLIC_URL}/images/properties/property1.jpg`,
       title: 'Hayot Tower',
-      description: 'Exclusive living in the heart of the city',
-      priceFrom: 'Starting from $650,000',
-      buttonText: 'Explore Residences'
+      description: 'Эксклюзивное проживание в центре города',
+      priceFrom: 'Цена от $650,000',
+      buttonText: 'Подробнее о резиденциях'
     },
     {
       image: `${PUBLIC_URL}/images/properties/property2.jpg`,
-      title: 'Luxury Penthouses',
-      description: 'Panoramic views from premium rooftop residences',
-      priceFrom: 'Starting from $1,200,000',
-      buttonText: 'View Penthouse Details'
+      title: 'Премиум Пентхаусы',
+      description: 'Панорамные виды из элитных резиденций на верхних этажах',
+      priceFrom: 'Цена от $1,200,000',
+      buttonText: 'Смотреть пентхаусы'
     },
     {
       image: `${PUBLIC_URL}/images/properties/property3.jpg`,
-      title: 'Corner Residences',
-      description: 'Elegant corner units with abundant natural light',
-      priceFrom: 'Starting from $850,000',
-      buttonText: 'See Available Units'
+      title: 'Угловые Апартаменты',
+      description: 'Элегантные угловые апартаменты с обилием естественного света',
+      priceFrom: 'Цена от $850,000',
+      buttonText: 'Доступные варианты'
     },
     {
       image: `${PUBLIC_URL}/images/properties/property4.jpg`,
-      title: 'Urban Sanctuary',
-      description: 'Modern living with exceptional amenities',
-      priceFrom: 'Starting from $720,000',
-      buttonText: 'Schedule a Tour'
+      title: 'Городской Оазис',
+      description: 'Современная жизнь с исключительными удобствами',
+      priceFrom: 'Цена от $720,000',
+      buttonText: 'Записаться на просмотр'
     },
   ];
 
@@ -123,7 +128,12 @@ const PropertySlider = () => {
                   <h1>{property.title}</h1>
                   <h3>{property.description}</h3>
                   <p className="price">{property.priceFrom}</p>
-                  <button className="learn-more-btn">{property.buttonText}</button>
+                  <button 
+                    className="learn-more-btn" 
+                    onClick={() => handleButtonClick(property.title)}
+                  >
+                    {property.buttonText}
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,7 +141,6 @@ const PropertySlider = () => {
         </Slider>
       </div>
       
-      {/* Only keeping the indicator dots for navigation */}
       <div className="slider-nav-buttons">
         <div className="slider-indicators">
           {sliderProperties.map((_, index) => (
@@ -139,7 +148,7 @@ const PropertySlider = () => {
               key={index}
               className="indicator-dot" 
               onClick={() => slider && slider.slickGoTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`Перейти к слайду ${index + 1}`}
             />
           ))}
         </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './PropertyCard.css';
 
-const PropertyCard = ({ property }) => {
+const PropertyCard = ({ property, onButtonClick }) => {
   const formatPrice = (price) => {
     return new Intl.NumberFormat('ru-RU', {
       style: 'currency',
@@ -31,7 +31,7 @@ const PropertyCard = ({ property }) => {
           <span>{property.area} м²</span>
         </div>
         <div className="property-price">{formatPrice(property.price)}</div>
-        <button className="view-property-btn">Смотреть детали</button>
+        <button className="view-property-btn" onClick={onButtonClick}>Смотреть детали</button>
       </div>
     </div>
   );
