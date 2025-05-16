@@ -308,4 +308,96 @@ h2 {
   section {
     padding: 3rem 1rem;
   }
+}
+
+/* Enhanced PropertySlider styling with navigation */
+.property-slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.property-slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Custom arrow styling */
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.custom-prev-arrow:hover,
+.custom-next-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-prev-arrow {
+  left: 20px;
+}
+
+.custom-next-arrow {
+  right: 20px;
+}
+
+/* Optional external navigation */
+.slider-nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-button {
+  background-color: #f8a100;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #e09000;
+}
+
+.slider-indicators {
+  display: flex;
+  gap: 10px;
+  margin: 0 15px;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator-dot:hover,
+.indicator-dot.active {
+  background-color: #f8a100;
 } 
